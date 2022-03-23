@@ -1,4 +1,7 @@
 import React from "react";
+import "./Screen.css";
+
+// Images
 import rock from "../assets/rock.png";
 import paper from "../assets/paper.png";
 import scissors from "../assets/scissors.png";
@@ -29,15 +32,14 @@ const Screen = (props) => {
   };
   return (
     <div>
-      <div className="card">
-        <div className="card h-100">
-          <div className="card-body">
-            <h4 className="card-title">{props.title}</h4>
-          </div>
+      <div className="screen">
+        <div className="screen_body">
+          <h4 className="screen_title">{props.title}</h4>
+
           <img
             src={renderImages()}
-            width="90px"
-            className="img-fluid "
+            width="120px"
+            className="screen_img "
             alt="RPS game"
           ></img>
         </div>

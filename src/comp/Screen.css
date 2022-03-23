@@ -1,0 +1,20 @@
+.screen {
+  background-color: rgb(193, 188, 216);
+  height: 15rem;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgb(218, 23, 23);
+}
+
+.screen_body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.screen_title {
+  font-family: "Moon", monospace;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

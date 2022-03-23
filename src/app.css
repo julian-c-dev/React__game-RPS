@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 4rem auto;
+  font-size: 4rem;
+  font-family: "Moon";
+  color: rgb(193, 188, 216);
+  text-shadow: 5px 5px 10px rgb(218, 23, 23);
+}

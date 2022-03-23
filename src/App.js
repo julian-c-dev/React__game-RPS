@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./app.css";
 import Panel from "./comp/Panel";
 import Screen from "./comp/Screen";
 
 function App() {
+  // * States:
   let [wins, setWins] = useState(0);
   let [losses, setLosses] = useState(0);
   let [ties, setTies] = useState(0);
+  // * Displays:
   let [userDisplay, setUserDisplay] = useState("rock");
   let [pcDisplay, setPcDisplay] = useState("paper");
   let [resultDisplay, setResult] = useState("scissors");
-
+  // * Variables
   const myChoices = ["rock", "paper", "scissors"];
   let userSelection, pcSelection;
 
+  // & User Selection Function
   const onHandleUserChoice = (userChoice) => {
     if (userChoice === "rock") {
       setUserDisplay(userChoice);
@@ -30,13 +33,17 @@ function App() {
     generateComputerChoice();
   };
 
+  // & AI Function
   function generateComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
     pcSelection = randomNum;
+
     generateResult(userSelection, pcSelection);
+
     setPcDisplay(myChoices[randomNum]);
   }
 
+  // & Logic Function
   function generateResult(a, b) {
     if (a === b) {
       setResult("draw");
@@ -52,13 +59,13 @@ function App() {
 
   return (
     <div className="container ">
-      <h1 className="display-5 m-5"> The Amazing Rock-Paper-Scissors </h1>
+      <h1 className="title"> The Amazing Rock-Paper-Scissors </h1>
       <div className="row ">
         <div className="col">
-          <Screen title="Player Choice:" img={userDisplay} />
+          <Screen title="Player picks :" img={userDisplay} />
         </div>
         <div className="col">
-          <Screen title="AI Choice:" img={pcDisplay} />
+          <Screen title="AI picks :" img={pcDisplay} />
         </div>
         <div className="col">
           <Screen title="Game Result:" img={resultDisplay} />
