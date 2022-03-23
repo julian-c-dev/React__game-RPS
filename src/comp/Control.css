@@ -1,6 +1,7 @@
 .control {
   background-color: rgb(131, 131, 163);
-  max-width: 415px;
+  margin: 0 auto;
+  max-width: 450px;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 3px 3px 1px rgb(49, 49, 49);

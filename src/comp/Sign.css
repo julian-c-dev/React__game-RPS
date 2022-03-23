@@ -1,2 +1,13 @@
-.custom {
+.sign {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .sign {
+    display: block;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+  }
 }

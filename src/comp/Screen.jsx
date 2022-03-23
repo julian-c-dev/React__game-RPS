@@ -38,7 +38,6 @@ const Screen = (props) => {
 
           <img
             src={renderImages()}
-            width="120px"
             className="screen_img "
             alt="RPS game"
           ></img>

@@ -1,8 +1,9 @@
 .screen {
   background-color: rgb(193, 188, 216);
-  height: 15rem;
+  height: 9rem;
   border-radius: 30px;
   box-shadow: 5px 5px 10px rgb(218, 23, 23);
+  margin: 1rem;
 }
 
 .screen_body {
@@ -10,11 +11,44 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.2rem;
+}
+.screen_body img {
+  width: 70px;
 }
 
 .screen_title {
   font-family: "Moon", monospace;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .screen {
+    height: 12rem;
+  }
+
+  .screen_body img {
+    width: 80px;
+  }
+
+  .screen_title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .screen {
+    height: 15rem;
+  }
+
+  .screen_body img {
+    width: 120px;
+  }
+
+  .screen_title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
 }
