@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./app.css";
-import Panel from "./comp/Panel";
+import Control from "./comp/Control";
 import Screen from "./comp/Screen";
+import Sign from "./comp/Sign";
 
 function App() {
   // * States:
@@ -62,32 +63,25 @@ function App() {
       <h1 className="title"> The Amazing Rock-Paper-Scissors </h1>
       <div className="row ">
         <div className="col">
-          <Screen title="Player picks :" img={userDisplay} />
+          <Screen title="Player picks" img={userDisplay} />
         </div>
         <div className="col">
-          <Screen title="AI picks :" img={pcDisplay} />
+          <Screen title="AI picks" img={pcDisplay} />
         </div>
         <div className="col">
-          <Screen title="Game Result:" img={resultDisplay} />
+          <Screen title="Game Result" img={resultDisplay} />
         </div>
       </div>
 
       <br />
-      <Panel choices={myChoices} onHandleClick={onHandleUserChoice} />
-      <div className="row ">
-        <div className="col">
-          <span className="badge bg-success p-2  me-2">You Win: </span>
-          {wins}
-        </div>
-        <div className="col">
-          <span className="badge bg-danger p-2 me-2">You Lose: </span>
-          {losses}
-        </div>
-        <div className="col">
-          <span className="badge bg-warning p-2 me-2"> You Tie: </span>
-          {ties}
-        </div>
-      </div>
+      <Control
+        choices={myChoices}
+        onHandleClick={onHandleUserChoice}
+        winsGames={wins}
+        lossesGames={losses}
+        tiesGames={ties}
+      />
+      <Sign />
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.control {
+  background-color: rgb(131, 131, 163);
+  max-width: 415px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 3px 3px 1px rgb(49, 49, 49);
+  font-family: monospace;
+}
+
+.control_body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
